@@ -1,0 +1,140 @@
+CONTACT INFO:
+
+Jordan Brown
+jbrown94@u.rochester.edu
+CSC 172 FALL 2015
+Project 2
+
+
+	NOTE: 
+	I also include my additional test cases 'additional_infix_expr', with an output and a text file that contains 
+	the correct solutions 'postfix_additional' and check to see if the file matches at the end
+
+COMPILE AND RUN OUTPUT DIRECTLY FROM COMMAND LINE:
+
+
+C:\Users\Jordan>cd Desktop
+
+C:\Users\Jordan\Desktop>cd calcfixing
+
+C:\Users\Jordan\Desktop\calcfixing>cd Project2-InfixCalculator
+
+C:\Users\Jordan\Desktop\calcfixing\Project2-InfixCalculator>cd src
+
+C:\Users\Jordan\Desktop\calcfixing\Project2-InfixCalculator\src>javac *.java
+
+C:\Users\Jordan\Desktop\calcfixing\Project2-InfixCalculator\src>java InfixCalcul
+atorTest C:\Users\Jordan\Desktop\infix_expr_short.txt C:\Users\Jordan\Desktop\my
+_eval.txt
+
+C:\Users\Jordan\Desktop\calcfixing\Project2-InfixCalculator\src>FC C:\Users\Jord
+an\Desktop\my_eval.txt C:\Users\Jordan\Desktop\postfix_eval_short.txt
+Comparing files C:\USERS\JORDAN\DESKTOP\my_eval.txt and C:\USERS\JORDAN\DESKTOP\
+POSTFIX_EVAL_SHORT.TXT
+***** C:\USERS\JORDAN\DESKTOP\my_eval.txt
+2.0
+6.2
+6.2
+0.0
+4.2
+-4.2
+12.0
+16.0
+-8.0
+9.0
+1.0
+0.0
+0.0
+1.0
+1.0
+1.0
+0.0
+1.0
+0.0
+1.0
+0.0
+1
+0
+0
+1.0
+***** C:\USERS\JORDAN\DESKTOP\POSTFIX_EVAL_SHORT.TXT
+2.00
+6.20
+6.20
+0.00
+4.20
+-4.20
+12.00
+16.00
+-8.00
+9.00
+1.00
+0.00
+0.00
+1.00
+1.00
+1.00
+0.00
+1.00
+0.00
+1.00
+0.00
+1.00
+0.00
+0.00
+1.00
+*****
+
+
+
+OUTPUT FOR ADDITIONAL TEST CASES INCLUDED:
+
+
+
+C:\Users\Jordan\Desktop\calcfixing\Project2-InfixCalculator\src>javac *.java
+
+C:\Users\Jordan\Desktop\calcfixing\Project2-InfixCalculator\src>java InfixCalcul
+atorTest C:\Users\Jordan\Desktop\additional_infix_expr.txt C:\Users\Jordan\Deskt
+op\my_output.txt
+
+C:\Users\Jordan\Desktop\calcfixing\Project2-InfixCalculator\src>java InfixCalcul
+atorTest C:\Users\Jordan\Desktop\additional_infix_expr.txt C:\Users\Jordan\Deskt
+op\my_output.txt
+
+C:\Users\Jordan\Desktop\calcfixing\Project2-InfixCalculator\src>java InfixCalcul
+atorTest C:\Users\Jordan\Desktop\additional_infix_expr.txt C:\Users\Jordan\Deskt
+op\my_output.txt
+
+C:\Users\Jordan\Desktop\calcfixing\Project2-InfixCalculator\src>FC C:\Users\Jord
+an\Desktop\postfix_additional.txt C:\Users\Jordan\Desktop\my_output.txt
+Comparing files C:\USERS\JORDAN\DESKTOP\postfix_additional.txt and C:\USERS\JORD
+AN\DESKTOP\MY_OUTPUT.TXT
+***** C:\USERS\JORDAN\DESKTOP\postfix_additional.txt
+-243
+0.25
+2
+-19
+2
+30
+64
+0.8
+371
+1
+1
+-1
+-711
+***** C:\USERS\JORDAN\DESKTOP\MY_OUTPUT.TXT
+-243.0
+0.25
+2.0
+-19.0
+2.0
+30.0
+64.0
+0.8
+371.0
+1.0
+1.0
+-1.0
+-711.0
+*****

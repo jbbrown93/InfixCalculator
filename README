@@ -1,0 +1,69 @@
+CONTACT INFO:
+
+Jordan Brown
+jbrown94@u.rochester.edu
+CSC 172 FALL 2015
+Project 2
+
+Project Synopsis:
+
+This project topic was on implementing java methods to create an infix calculator that takes in an input file containing
+infix expression, then translates the infix expressions to postfix expressions, then evaluates the results and writes
+the calculations to an output file. For my algorithm, I followed the Shunting-Yard Algorithm to translate the infix to
+postfix. My program can take in both positive and negative floating point or integer numbers (evaluated as doubles),
+and supports the operations addition [+], subtraction [-], multiplication [*], division [/], exponentiation [^], 
+and modulus [%]. My program also supports the relational operators greater than [<], less than [<], equal to [=],
+and the logical operators AND [&], OR [|], and NOT [!] (with 1 representing true and 0 representing false). It also
+takes into account parenthesis.
+
+The largest obstacle for this project was writing a program that could take in an infix expression and then determine
+which expressions were operators and which were operands. This was tricky because the numbers could have decimal places
+as well and are not limited to integers. To overcome this, I kept an array list of all possible operators (as listed 
+above) and when looping through the input expression, if it was not an operator then it was an operand (for more than one
+digit I explain how I accounted for that below). Separating all the individual string characters using a Regular Expression
+operation ( replaceAll("\\s+","") ) was extremely helpful. This also means that I treated a decimal as not falling into
+the operators category. Another obstacle was to determine whether a negative number
+was present (e.g. 1--1). This was particularly difficult, but I noticed that if there are two consecutive operators,
+and the second one was a minus sign with an operand following, I knew it was a negative number. To recognize whether 
+there were numbers with more than one digit, I kept a count of the amount of operands present, then if the count was 
+greater than 1, it meant that there was an operand after another operand. I then would merge these operands together
+by concatenating, and this repeated no matter how large the digits were. 
+And to evaluate the expression, since they were Strings, I parsed them into doubles, then at the end of the calculation
+converted them back to strings by concatenating the double results with an empty string.
+
+Extra Credit: My program supports the modulus [%] and exponentiation [^] operators
+
+I have also included a text file titled, 'additional_infix_expr' , that contains additional test cases to demonstrate
+my program's capabilities with modulus and exponentiation.
+
+InfixCalculatorTest contains a main method for running my program and all the various methods that make up an infix calculator as 
+described above. 
+
+DoubleNode, MyDoublyLinkedList, MyQueue, DoublyLinkedList, and Queue were my classes and interfaces to create a doubly linked list  
+queue implementation. 
+
+MyStack, Node, SimpleLinkedList, SingleLinkedList, and Stack are my classes for a singly linked list stack implementation.
+
+GENERAL INSTRUCTIONS ON COMPILING AND RUNNING CODE:
+
+1. Move project file to Desktop
+2. Open Command Prompt window
+3. Enter cd <Desktop> 
+4. Enter cd <Lab file name> 
+5. Enter cd src
+5. Enter javac *.java 
+6. Enter java <ClassName> <location of input file> <location of output file>
+
+Do not include angle brackets
+
+EXAMPLE INSTRUCTIONS FOR EACH PART:
+
+1. Move zip project file to Desktop
+2. Extract all files from zip project file
+3. Open Command Prompt window
+4. Enter cd Desktop 
+5. Enter cd InfixCalculator
+6. Enter cd src
+7. Enter javac *.java
+8. Enter java InfixCalculatorTest <location of input file to take infix expressions> <location of output file to write results to>
+	... <output> ...
